@@ -38,5 +38,45 @@ Spring Boot
 public class UserService {}
 👉 No XML, automatic bean creation.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2️⃣ Spring Boot Architecture
+🧱 Architecture Layers
+Client(Browser/Postman)
+       |
+       V
+   Controller
+       |
+       V
+    Service
+       |
+       V
+   Repository
+       |
+       V
+    Database
 
+🔹 Layer Responsibilities
+__________________________________________________
+|Layer              |   Purpose                  |
+--------------------------------------------------
+|Controller         |   Handles HTTP Request     |
+|service            |   Business Logic           |
+|Repository         |   DB Operations            |
+|Model              |   Entity/Data Objects      |
+|________________________________________________|
+
+📌 Example Structure
+com.example.demp
+     |_ Controller
+     |_ Service
+     |_ Repository
+     |_ Model
+     |_ DemoApplication.java
+
+📌 Example Flow
+@GetMapping("/home")
+public String User(){
+    return "Hello";
+}
+Client->Controller->Response
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
