@@ -1,1 +1,42 @@
+1️⃣ Difference between spring and springboot
+🔹Spring:
+Spring is a lightweight java framework that provides:
+->dependency injection
+->inversion of control
+->MVC Architecture
+⚠️Drawbacks of using Spring
+-> Boilerplate code
+-> Too much xml configuration
+-> External server
+-> Manual Dependency Management
+
+🔹Spring Boot:
+Spring boot is built on top of spring for faster development
+✅ Advantages:
+-> faster development
+-> no XML configuration
+-> Embedded Server
+-> Auto configuration
+
+🔁 comparison table
+_________________________________________________________________________
+|feature              |   Spring                 |      Springboot      |
+-------------------------------------------------------------------------
+|configutation        |   xml+java               |      java only       |
+|server               |   External               |      Embedded server |
+|setup time           |   takes more time        |      less time       |
+|Auto configuration   |   not possible           |      possible        |
+|Boiler plate         |   more                   |      minimal         |
+|_______________________________________________________________________|
+
+📌 Example
+Spring (old way)
+<bean id="userService" class="com.app.UserService"/>
+
+Spring Boot
+@Service
+public class UserService {}
+👉 No XML, automatic bean creation.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
