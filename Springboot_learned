@@ -79,4 +79,7 @@ public String User(){
 }
 Client->Controller->Response
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+For interview
+@SpringBootConfiguration identifies the main configuration class,
+@ComponentScan scans packages and creates beans,
+@EnableAutoConfiguration automatically configures beans based on project dependencies and properties.
