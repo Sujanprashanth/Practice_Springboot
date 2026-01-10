@@ -79,6 +79,60 @@ public String User(){
 }
 Client->Controller->Response
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3️⃣ Starter Dependencies
+🔹 What are Starter Dependencies?
+   Starter dependencies are pre-defined dependencies which are stored in a dependency bundle
+   Instead of adding 10 dependencies individually we are using one starter
+🔹 Common Starters
+_____________________________________________________________
+|starter                       |   Purpose                  |
+-------------------------------------------------------------
+|spring-boot-starter-web       |   REST API                 |
+|spring-boot-starter-data-jpa  |   DB+Hibernate             |
+|spring-boot-starter-security  |   security                 |
+|spring-boot-starter-testing   |   testing                  |
+|___________________________________________________________|
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4️⃣ @SpringBootApplication
+🔹 What is it?
+    This is the entry point of the springboot application
+🔍 Internally It Combines:
+      @ComponentScan             ---> Finds the beans
+      @EnableAutoConfiguration   ---> Auto configures the beans based on the dependencies added
+      @SpringBootConfiguration   ---> Finds the main config class.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+5️⃣ Application Properties (.properties / .yml)
+🔹 Purpose
+    It is used to configure 
+         -> server port number
+         -> database
+         -> profiles
+         -> logging
+   1) Example for Application.properties
+   server.port=8080
+   spring.application.name=Demo_app
+
+   2) Example for Application.yml
+   server:
+     port:8080
+   spring:
+     application:
+         name:my_app
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+🔁 Difference
+_____________________________________________________________
+|properties                    |   yml                      |
+-------------------------------------------------------------
+|key-value                     |   hierarchical             |
+|less readable                 |   more readable            |
+|old styled                    |   modern styled            |
+|___________________________________________________________|
+
+📌 DB Example
+   spring.datasource.url      =jdbc:mysql://localhost:3306/testdb
+   spring.datasource.username =root
+   spring.datasource.password =1234
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 For interview
 @SpringBootConfiguration identifies the main configuration class,
 @ComponentScan scans packages and creates beans,
