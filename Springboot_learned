@@ -125,3 +125,27 @@ _______________________________________________________________________________
 -------------------------------------------------------------------------------
 |CommandLineRunner         |   Runs on start                                  |
 |_____________________________________________________________________________|
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+UserController.java
+
+package spring.interview.spring_practice.UserControllers;
+import org.springframework.web.bind.annotation.*;
+@RestController
+@RequestMapping("api/")
+public class UserController {
+    @GetMapping("user1")
+    public String name(){
+        return "Hi how are you?";
+    }
+
+    @GetMapping("user2/{name}")
+    public String s_name(@PathVariable String name){
+        return "Hi how are you? "+name;
+    }
+
+    @GetMapping("user3/Login")
+    public String p_name(@RequestParam String u_name,@RequestParam int p_word){
+        return "Login Successful "+u_name;
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
