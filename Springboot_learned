@@ -83,3 +83,45 @@ For interview
 @SpringBootConfiguration identifies the main configuration class,
 @ComponentScan scans packages and creates beans,
 @EnableAutoConfiguration automatically configures beans based on project dependencies and properties.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Basic annotations for spring boot:
+_______________________________________________________________________________
+|Annotation                |   Purpose                                        |
+-------------------------------------------------------------------------------
+|@SpringBootApplication    |   Start point of the app                         |
+-------------------------------------------------------------------------------
+|@ComponentScan            |   Finds the classes that are able to create      |
+|                          |   objects and stores it in a spring container    |
+|                          |   this is reffered to as beans                   |
+-------------------------------------------------------------------------------
+|@EnableAutoConfiguration  |   Configure beans based on the dependencies added|
+-------------------------------------------------------------------------------
+|@SpringBootConfiguration  |   Finds the main Config class                    |
+-------------------------------------------------------------------------------
+|@Component                |   spring creates an object                       |
+-------------------------------------------------------------------------------
+|@Service                  |   Used for writing business logic                |
+-------------------------------------------------------------------------------
+|@RestController           |   handles http request and sends data directly to|
+|                          |   the client/browser,It is a combination of      |
+|                          |   @Controller and @ResponseBody                  |
+-------------------------------------------------------------------------------
+|@Controller               |   handles http request and returns the html/view |
+|                          |   page                                           |
+-------------------------------------------------------------------------------
+|@ResponseBody             |   Sends the data in HTTP response                |
+-------------------------------------------------------------------------------
+|@GetMapping               |   Handles HTTP GET Request                       |
+-------------------------------------------------------------------------------
+|@RequestMapping           |   Base URL                                       |
+-------------------------------------------------------------------------------
+|@PathVariable             |   Gets a value from the URL path                 |
+-------------------------------------------------------------------------------
+|@RequestParam             |   Gets a value from the URL query                |
+-------------------------------------------------------------------------------
+|@Autowired                |   Spring automatically injects the objects       |
+-------------------------------------------------------------------------------
+|@Value                    |   Reads value from application properties or yml |
+-------------------------------------------------------------------------------
+|CommandLineRunner         |   Runs on start                                  |
+|_____________________________________________________________________________|
