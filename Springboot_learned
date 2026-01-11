@@ -180,6 +180,51 @@ _______________________________________________________________________________
 |CommandLineRunner         |   Runs on start                                  |
 |_____________________________________________________________________________|
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1️⃣ REST API DEVELOPMENT:
+🔹Definition :
+  It means one application can communicate with another using HTTP
+  Example:
+  Browser talks to springboot backend
+
+2️⃣ HTTP Methods:
+_____________________________________________________________
+|HTTP methods                  |   definition               |
+-------------------------------------------------------------
+|GET                           |   READ                     |
+|POST                          |   CREATE                   |
+|PUT                           |   UPDATE                   |
+|DELETE                        |   DELETE                   |
+|___________________________________________________________|
+
+3️⃣ @RestController:
+    It is used to create REST API's it is used to send data and return as JSON objects
+
+4️⃣ @RequestMapping:
+    Used to define a base URL for APIs.
+
+5️⃣ @GetMapping, @PostMapping:
+    These map HTTP methods to Java methods.
+    @GetMapping("/all")
+    @PostMapping("/add")
+
+6️⃣ @PathVariable vs @RequestParam:
+    @PathVariable   ---> Gets the value from URL path
+    @RequestParam   ---> Gets the value from the query param
+
+7️⃣ @RequestBody:
+    It is used with PUT,POST and it accepts the JSON data
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 UserController.java
 
 package spring.interview.spring_practice.UserControllers;
