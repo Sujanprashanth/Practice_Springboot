@@ -294,6 +294,63 @@ ________________________________________________________________________________
  ->bean injected
  ->initialized
  ->destroyed
+
+Qualifiers task
+CarController.java
+package spring.interview.spring_practice.UserControllers;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import spring.interview.spring_practice.UserServices.Cars;
+
+@RestController
+@RequestMapping("/api")
+public class CarController {
+
+    private final Cars dieselCar;
+    private final Cars petrolCar;
+
+    public CarController(@Qualifier("diesel") Cars dieselCar,@Qualifier("petrol") Cars petrolCar){
+        this.dieselCar=dieselCar;
+        this.petrolCar=petrolCar;
+    }
+
+    @GetMapping("/car/diesel")
+    public String diesel(){
+        return "car is running using "+dieselCar.car();
+    }
+
+    @GetMapping("/car/petrol")
+    public String petrol(){
+        return "car is running using "+petrolCar.car();
+    }
+}
+
+Cars.java
+package spring.interview.spring_practice.UserServices;
+import org.springframework.stereotype.Component;
+public interface Cars {
+    public String car();
+}
+
+@Component("petrol")
+class petrol implements Cars{
+
+    @Override
+    public String car() {
+        return "using petrol engine";
+    }
+}
+
+@Component("diesel")
+class Diesel implements Cars{
+
+    @Override
+    public String car() {
+        return "using diesel engine";
+    }
+}
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 UserController.java
 package spring.interview.spring_practice.UserControllers;
