@@ -213,20 +213,89 @@ _____________________________________________________________
 
 7️⃣ @RequestBody:
     It is used with PUT,POST and it accepts the JSON data
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+LEVEL 3 – SPRING CORE (IoC & DI)
+1️⃣ Inversion of Control (IoC)
+    Instead of creating the object manually using the new keyword,we are giving the full control of object creation and management to the spring.
 
+2️⃣ Dependency Injection (DI)
+    Spring will inject the required object into the class
 
+3️⃣ @Component, @Service, @Repository
+🔹 Common Meaning
+    All creates the spring managed beans
+_____________________________________________________________
+|Annotations                   |   definition               |
+-------------------------------------------------------------
+|@Component                    |   generic class            |
+|@Service                      |   Business logic           |
+|@Repository                   |   Database layer           |
+|___________________________________________________________|
 
+4️⃣ @Autowired (Dependency Injection)
+    This annotation is used to achieve Dependency injection
 
+5️⃣ TYPES OF DEPENDENCY INJECTION (DI)
+    -> Field injection(not recommended)     ------>Spring injects dependency directly into the variable
+🔹 Example:
+   @RestController
+   public class UserController {
 
+      @Autowired
+      private UserService userService;
 
+      @GetMapping("/msg")
+      public String msg() {
+          return userService.message();
+      }
+  }
 
+    -> Constructor injection(recommended)   ------>Spring injects dependency directly into the constructor
+  🔹Example
+     @RestController
+     public class UserController {
+     private final UserService userService;
+     public UserController(UserService userService){
+          this.userService=userService
+      }
+      @GetMapping("/msg")
+      public String msg() {
+          return userService.message();
+      }
+  }
 
+ -> Setter injection(rarely used)        ------>Spring injects dependency directly into the setter method
+ 🔹Example
+   @Service
+   public class UserService {
+   private MessageService messageService;
+     @Autowired
+     public void setMessageService(MessageService messageService) {
+          this.messageService = messageService;
+     }
+  }
+6️⃣ @Qualifier:
+  Sometimes spring may have beans of the same type.It will cause a confusion.So to avoid this confusion 
+  we are using this annotation.
 
+7️⃣ BEAN SCOPE
+  singleton vs prototype.
+______________________________________________________________________________________
+|features                      |   Singleton                | Prototype              |
+--------------------------------------------------------------------------------------
+|object                        |   one                      | multiple               |
+|memory                        |   less                     | more                   |
+|bean lifecycle                |   full                     | partial                |
+|Usecase                       |   service                  | data objects           |
+|____________________________________________________________________________________|
 
-
+8️⃣ Bean lifecycle:
+ ->bean is created
+ ->bean injected
+ ->initialized
+ ->destroyed
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 UserController.java
-
 package spring.interview.spring_practice.UserControllers;
 import org.springframework.web.bind.annotation.*;
 @RestController
