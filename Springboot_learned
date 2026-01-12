@@ -352,6 +352,70 @@ class Diesel implements Cars{
     }
 }
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+🔁 BEAN LIFECYCLE FLOW (EASY)
+1️⃣ Bean Created
+2️⃣ Dependency Injected
+3️⃣ @PostConstruct runs
+4️⃣ Bean is Ready to Use
+5️⃣ Application Running
+6️⃣ @PreDestroy runs
+7️⃣ Bean Destroyed
+
+🔵 PROGRAM EXAMPLE (SIMPLE & COMPLETE)
+1️⃣ Create a Bean
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+import org.springframework.stereotype.Component;
+@Component
+public class LifeCycleBean {
+    public LifeCycleBean() {
+        System.out.println("1️⃣ Bean Constructor Called");
+    }
+
+    @PostConstruct
+    public void init() {
+        System.out.println("3️⃣ @PostConstruct: Bean Initialized");
+    }
+
+    @PreDestroy
+    public void destroy() {
+        System.out.println("6️⃣ @PreDestroy: Bean Destroyed");
+    }
+}
+
+2️⃣ Use the Bean in Controller
+@RestController
+public class TestController {
+    private final LifeCycleBean lifeCycleBean;
+    public TestController(LifeCycleBean lifeCycleBean) {
+        this.lifeCycleBean = lifeCycleBean;
+    }
+
+    @GetMapping("/test")
+    public String test() {
+        return "Bean is ready and working";
+    }
+}
+
+🔵 WHAT HAPPENS INTERNALLY (VERY IMPORTANT)
+🟢 When Application STARTS
+1️⃣ Bean Constructor Called
+3️⃣ @PostConstruct: Bean Initialized
+
+➡ Bean is now ready to use
+
+🟢 When API is CALLED
+GET /test
+
+Response:
+Bean is ready and working
+➡ Bean is already created, so Spring just uses it
+
+🔴 When Application STOPS
+6️⃣ @PreDestroy: Bean Destroyed
+
+➡ Bean cleanup happens
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 UserController.java
 package spring.interview.spring_practice.UserControllers;
 import org.springframework.web.bind.annotation.*;
