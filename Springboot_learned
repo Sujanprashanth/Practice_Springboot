@@ -416,6 +416,82 @@ Bean is ready and working
 
 ➡ Bean cleanup happens
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+LEVEL 3 – SPRING CORE (IOC & DI)
+
+🔹 TASK 5 – Multiple Bean Injection
+    Task:-Create two beans of the same interface and inject one using @Qualifier.
+    Program
+    Car.java
+    public interface Car{
+        public String car();
+    }
+    @Component("diesel")
+    class Diesel implements Car{
+        public String car(){
+            return "diesel engine";
+        }
+    }
+   
+    @Component("petrol")
+    class Petrol implements Car{
+        public String car(){
+            return "petrol engine";
+        }
+    }
+
+    CarController.java
+    @RestController
+    @RequestMapping("/api")
+    public class CarController{
+        Diesel dieselmsg;
+        Petrol petrolmsg;
+        public CarController(@Qualifer("diesel") Diesel dieselmsg,@Qualifer("petrol") Petrol petrolmsg){
+            this.dieselmsg=dieselmsg;
+            this.petrolmsg=petrolmsg;
+        }
+        @GetMapping("/car/diesel")
+        public String car1_msg(){
+            return "car is running in "+" "+dieselmsg.car(); 
+        }
+        @GetMapping("/car/petrol")
+        public String car2_msg(){
+            return "car is running in "+" "+petrolmsg.car();
+        }
+    }
+
+🔹 TASK 7 – Bean Scope (Singleton)
+    Task:-Create a singleton bean and print its hashcode multiple times.
+    Program
+    User11Service.java
+    package spring.interview.spring_practice.UserServices;
+    import org.springframework.context.annotation.Scope;
+    import org.springframework.stereotype.Component;
+    @Component
+    @Scope("Singleton")
+    public class User11Service{
+
+    }
+
+    User11Controller.java
+    package spring.interview.spring_practice.UserControllers;
+    import org.springframework.stereotype.Component;
+    import org.springframework.web.bind.annotation.GetMapping;
+    import org.springframework.web.bind.annotation.RestController;
+    import spring.interview.spring_practice.UserServices.User11Service;
+    @Restcontroller
+    public class User11Controller{
+    User11Service user11Service1;
+    User11Service user11Service2;
+    public User11Controller(User11Service user11Service1,User11Service user11Service2){
+        this.user11Service1=user11Service1;
+        this.user11Service2=user11Service2;
+    }
+    @GetMapping("/hashcode")
+    public String s_name(){
+        return user11Service1.hashcode()+"|"+user11Service2.hashcode();
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 UserController.java
 package spring.interview.spring_practice.UserControllers;
 import org.springframework.web.bind.annotation.*;
