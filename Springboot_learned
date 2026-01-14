@@ -535,11 +535,20 @@ LEVEL 4 – DATABASE + JPA (SPRING DATA JPA)
 
 2️⃣ ORM Basics (Object Relational Mapping)
     What is ORM?
+      ORM(Object Relational Mapping) is used to map java objects with database tables.
 
     Simple meaning:
-
+      Java classes <> database table
+      Java objects <> table rows
+      fields <> columns
     Example:
+      User user = new User(1,"Sujan","sujan2002@gmail.com")
 
     Automatically stored as:
+     _______________________________________________________________________
+     |id                      |   name                | email              |
+     -----------------------------------------------------------------------
+     |1                       |   Sujan               | sujan2002@gmail.com|
+     |_____________________________________________________________________|
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
