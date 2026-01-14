@@ -525,7 +525,7 @@ LEVEL 4 – DATABASE + JPA (SPRING DATA JPA)
       -> Uses Repository interface
 
     Example:
-    public interface Repository implements JpaRepository<User,Integer>{}
+    public interface Repository extends JpaRepository<User,Integer>{}
 
     with this one line you get:-
       -> Save
@@ -572,4 +572,42 @@ LEVEL 4 – DATABASE + JPA (SPRING DATA JPA)
 
 📌 Spring automatically creates table:
     User(id,name,email) 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4️⃣ Repositories
+    What is Repository?
+     Repository is used to handle DB operations
+
+    Why interface?
+     Spring automatically creates the implementation at runtime
+
+    Example:
+    public interface UserRepository extends JpaRepository<User,Integer>{}
+
+    Advasntages:
+     ->no need for SQL code
+     ->no need for implementation class
+     ->Direct DB access
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+5️⃣ CRUD using JpaRepository
+    CRUD Meaning 
+      -> CREATE
+      -> READ
+      -> UPDATE
+      -> DELETE
+
+    Example:
+      repository.save(user)    ----->create/update/insert
+      repository.findAll()     ----->read
+      repository.findById(1)   ----->read by id
+      repository.deleteById()  ----->delete
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+6️⃣ Find by Name / Email – Derived Queries
+❓ What is this?
+    Spring data JPA automatically creates SQL Queries based on the method name in user repository.
+
+    Example:
+    public interface UserRepository extends Jparepository{
+       List<User> findByName(String name);
+       User findByEmail(String email);
+    }
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
