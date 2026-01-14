@@ -551,4 +551,25 @@ LEVEL 4 – DATABASE + JPA (SPRING DATA JPA)
      |1                       |   Sujan               | sujan2002@gmail.com|
      |_____________________________________________________________________|
 
+3️⃣ Entity Mapping
+    What is an Entity?
+      Entity is used to map java classes with database table    
+
+    Key Annotations:
+      @Entity: marks the class as table
+      @Id: primary key
+      @GeneratedValue: auto id
+
+    Example:
+    @Entity
+    public class User{
+        @Id
+        @GeneratedValue
+        private int id;
+        private String name;
+        private String email;
+    }
+
+📌 Spring automatically creates table:
+    User(id,name,email) 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
