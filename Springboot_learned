@@ -611,3 +611,23 @@ LEVEL 4 – DATABASE + JPA (SPRING DATA JPA)
        User findByEmail(String email);
     }
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+7️⃣ JPQL vs Native Query
+    JPQL (Java-based Query)
+      ->Entity based
+      ->database independent
+      ->preferred
+
+    Native Query (SQL-based)
+      ->SQL based
+      ->database dependent
+      ->use when needed
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+8️⃣ Pagination & Sorting
+    Pagination
+       It is mainly used when there are large no of records and if we want to return those data's directly
+    it will reduce the performance.So inorder to avoid it we use pagination here large amountof data is 
+    seperated into smaller pages and then those chunks of data are returned.
+
+    Sorting
+       Used to return those datas in a meaningful way
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
