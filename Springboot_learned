@@ -514,3 +514,32 @@ public class UserController {
     }
 }
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+LEVEL 4 – DATABASE + JPA (SPRING DATA JPA)
+1️⃣ Spring Data JPA
+    What is it?
+    Spring data jpa is a spring module which lets you to handle db operations easily,without writing sql again and again
+    
+    why we use it?
+      -> To avoid JDBC boilerplate code.
+      -> To avoid writing sql query for basic CRUD operations.
+      -> Uses Repository interface
+
+    Example:
+    public interface Repository implements JpaRepository<User,Integer>{}
+
+    with this one line you get:-
+      -> Save
+      -> findById()
+      -> findByAll()
+      -> deleteById()
+
+2️⃣ ORM Basics (Object Relational Mapping)
+    What is ORM?
+
+    Simple meaning:
+
+    Example:
+
+    Automatically stored as:
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
