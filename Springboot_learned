@@ -630,4 +630,20 @@ LEVEL 4 – DATABASE + JPA (SPRING DATA JPA)
 
     Sorting
        Used to return those datas in a meaningful way
+    
+    Example:
+    Formula used internally 👇
+    OFFSET = page × size
+    LIMIT = size
+    For page = 0, size = 3
+    OFFSET = 0 × 3 = 0
+    LIMIT = 3
+
+    SQL becomes:
+    SELECT * FROM users
+    LIMIT 3 OFFSET 0;
+    ➡ Returns:
+    1 A
+    2 B
+    3 C
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
