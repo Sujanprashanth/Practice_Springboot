@@ -725,9 +725,6 @@ server.port=8080
 
 5️⃣ @NotNull, @Email (Request Validation)
 🔹 What they do
-
-5️⃣ @NotNull, @Email (Request Validation)
-🔹 What they do
     Applied on entity fields to validate inputs
 
 🔹 Example (concept)
