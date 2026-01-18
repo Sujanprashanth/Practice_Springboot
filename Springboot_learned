@@ -719,3 +719,39 @@ server.port=8080
      |@Size                   |   length limit in a string        |
      |@Min/@Max               |   number range                    | 
      |____________________________________________________________|
+
+5️⃣ @NotNull, @Email (Request Validation)
+🔹 What they do
+
+5️⃣ @NotNull, @Email (Request Validation)
+🔹 What they do
+    Applied on entity fields to validate inputs
+
+🔹 Example (concept)
+    if email is not valid
+
+    email : not valid email format
+
+6️⃣ @Valid
+🔹 What it is
+    It provides validation on request body
+
+🔹 Why needed
+    without @Valid validation won't work
+
+🔹 Example (concept)
+    PostMapping
+    (@Valid Requestbody)
+
+7️⃣ Validation Error Response
+🔹 What it is
+    Validation error response provides a structured error message to the client 
+
+🔹 Why needed
+     -> Client gets clear error message
+     -> User-friendly
+🔹 Example (concept)
+      {
+         email : not valid email format
+         name  : not blank
+      }
