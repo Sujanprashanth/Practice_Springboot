@@ -661,3 +661,27 @@ spring.jpa.properties.hibernate.format_sql=true
 spring.application.name=myapp
 server.port=8080
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1️⃣ @ExceptionHandler
+🔹 What it is
+    ExceptionHandler is used to handle exceptions at controller-level
+
+🔹 Why needed
+      -> To prevent applications from crashing
+      -> To provide a simple readable message instead of complicated message
+
+🔹 Example (concept)
+    Using @ExceptionHandler error message ----> User not found at ID 2
+
+2️⃣ @ControllerAdvice (GLOBAL HANDLER)
+🔹 What it is
+    ControllerAdvice is a centralized form of exception handling that occurs at all controllers
+
+🔹 Why needed
+      -> To avoid repetation of exception handler codes
+      -> To provide exception at application wise
+
+🔹 Example (concept)
+    One ControllerAdvice can handle
+       -> UserNotFoundException
+       -> Validation
+       -> Runtime
