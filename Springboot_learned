@@ -84,6 +84,7 @@ Client->Controller->Response
 🔹 What are Starter Dependencies?
    Starter dependencies are pre-defined dependencies which are stored in a dependency bundle
    Instead of adding 10 dependencies individually we are using one starter
+
 🔹 Common Starters
 _____________________________________________________________
 |starter                       |   Purpose                  |
