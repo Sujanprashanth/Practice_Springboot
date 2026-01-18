@@ -253,6 +253,7 @@ _____________________________________________________________
   }
 
     -> Constructor injection(recommended)   ------>Spring injects dependency directly into the constructor
+
   🔹Example
      @RestController
      public class UserController {
