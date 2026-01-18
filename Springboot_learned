@@ -685,3 +685,18 @@ server.port=8080
        -> UserNotFoundException
        -> Validation
        -> Runtime
+
+3️⃣ Custom Exception
+🔹 What it is
+    It is a user defined exception class
+
+🔹 Why needed
+      -> To give meaningful errors message
+      -> For simplicity and readibility
+
+🔹 Example (concept)
+    without Custom exception
+    NullPointerException
+
+    with Custom exception
+    UserNotFoundException
