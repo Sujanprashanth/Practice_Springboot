@@ -700,3 +700,22 @@ server.port=8080
 
     with Custom exception
     UserNotFoundException
+
+4️⃣ Validation API
+🔹 What it is
+    Validation API is used to validate data automatically
+
+🔹 Why needed
+      -> To avoid inconsistent data reaching DB
+      -> Reduces additional if,else
+
+🔹 Common Annotations
+     ______________________________________________________________
+     |Annotations             |   Meaning                         |
+     --------------------------------------------------------------
+     |@NotBlank               |   value cannot be an empty string | 
+     |@NotNull                |   value cannot be null            | 
+     |@Email                  |   value should follow email format| 
+     |@Size                   |   length limit in a string        |
+     |@Min/@Max               |   number range                    | 
+     |____________________________________________________________|
