@@ -756,3 +756,35 @@ server.port=8080
          name  : not blank
       }
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+LEVEL 6 – SPRING BOOT ADVANCED
+1️⃣ Profiles (dev, test, prod)
+🔹 What is a Profile?
+    A profile allows the application to run with different configurations for different environment
+  
+    Example
+     ->dev  --->local DB
+     ->test --->test DB
+     ->prod --->production DB
+
+🔹 Why needed?
+     ->You do not have to run the application with the same username ,password for all the environment
+     ->Industry Standard Practice.
+
+2️⃣ Logging (Logback)
+🔹 What is Logging?
+
+🔹 Why needed?
+
+🔹 Log Levels
+
+
+
+Logging (Logback)
+
+Actuator
+
+DTO & ModelMapper
+
+ResponseEntity
+
+CORS
