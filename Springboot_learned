@@ -812,7 +812,54 @@ _____________________________________________________________
 |___________________________________________________________|
 
 4️⃣ DTO & ModelMapper
+🔹 What is DTO?
+    DTO(Data Transfer Object) refers to what data needs to out of the API
 
-ResponseEntity
+🔹 Why needed?
+    ->To avoid all data transfered via entity
+    ->hide sensitive data like password
 
-CORS
+🔹 Entity vs DTO
+    Entity{
+       id,
+       name,
+       email,
+       password
+    }
+
+    DTO{
+       id,
+       name,
+       email
+    }
+
+🔹 ModelMapper (Concept)
+    ModelMapper automatically maps Entity and DTO
+
+🔹 Example Flow
+    DB->Entity->DTO->JSON response
+
+5️⃣ ResponseEntity
+🔹 What is ResponseEntity?
+   It lets yo control HTTP STATUS,responsebody,headers
+
+🔹 Why needed?
+   Instead of always returning 200 OK, we return:
+     ->201 Created
+     ->404 Not Found
+     ->400 Bad Request
+
+6️⃣ CORS
+🔹 What is CORS?
+    CROS(Cross Orign Resource Sharing) allows which frontend domain can access your backend
+
+🔹 Why needed?
+    Frontend(React) uses http://localhost:3000
+
+    Backend(SpringBoot) uses http://localhost:8080
+
+    Since it contradicts browser will block it so to avoid this we use cressorign
+
+🔹 Solution (Concept)
+   @CrossOrign(orign="http://localhost:3000")
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
