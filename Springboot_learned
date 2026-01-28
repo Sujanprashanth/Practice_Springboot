@@ -772,18 +772,46 @@ LEVEL 6 – SPRING BOOT ADVANCED
 
 2️⃣ Logging (Logback)
 🔹 What is Logging?
+    Logging is used to record application events like
+       ->Errors
+       ->info
+       ->warnings
 
 🔹 Why needed?
+       ->Avoid issues.
+       ->Monitor production systems
+       ->Avoids (System.out.println)
 
 🔹 Log Levels
+_____________________________________________________________
+|level                         |   meaning                  |
+-------------------------------------------------------------
+| TRACE                        |   VERY DETAILED            |
+| DEBUG                        |   DETAILED                 |
+| INFO                         |   GENERAL INFO             |
+| WARN                         |   POTENTIAL ISSUES         |
+| ERROR                        |   SERIOUS PROBLEMS         |
+|___________________________________________________________|
 
+3️⃣ Actuator
+🔹 What is Actuator?
+   Actuators are ready made endpoint used to monitor an application performance,health,info
 
+🔹 Why needed?
+       ->App health
+       ->App perf
+       ->App info
 
-Logging (Logback)
+🔹 Common Actuator Endpoints
+_____________________________________________________________
+|Actuators                     |   meaning                  |
+-------------------------------------------------------------
+| actuators/health             |   App health               |
+| actuators/info               |   App info                 |
+| actuators/metrix             |   App performance          |
+|___________________________________________________________|
 
-Actuator
-
-DTO & ModelMapper
+4️⃣ DTO & ModelMapper
 
 ResponseEntity
 
