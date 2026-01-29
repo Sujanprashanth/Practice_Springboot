@@ -863,3 +863,11 @@ _____________________________________________________________
 🔹 Solution (Concept)
    @CrossOrign(orign="http://localhost:3000")
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+profiles activation code:
+
+application.properties:
+spring.profiles.active=dev
+
+application-dev.properties:
+server.port=3030
+spring.application.name=dev-app-name
