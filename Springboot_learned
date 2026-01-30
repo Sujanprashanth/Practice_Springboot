@@ -871,3 +871,9 @@ spring.profiles.active=dev
 application-dev.properties:
 server.port=3030
 spring.application.name=dev-app-name
+
+actuators code
+management.endpoints.web.exposure.include=health,info
+management.endpoint.health.show-details=always
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
