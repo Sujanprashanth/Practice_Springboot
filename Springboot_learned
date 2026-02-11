@@ -876,4 +876,31 @@ actuators code
 management.endpoints.web.exposure.include=health,info
 management.endpoint.health.show-details=always
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+LEVEL 7 – SPRING SECURITY (INTERVIEW FAVORITE)
+Spring security:
+  It is a framework which provides authentication,authorization and provides security against security attacks like CSRF,XSS for our springboot application
+1️⃣ Authentication vs Authorization
+    Authentication -----------> It refers whom to allow
+    Example:- Are you Sujan? 
 
+    Authorization -----------> What the user is allowed to do
+    Example:- Are you allowed to delete this data
+
+2️⃣ Spring Security Architecture
+    Request ----> Security Filter Chain(Intercepts the request) ----> Authentication Manager(handles authentication) ----> UserDetailsService(loads the user details) 
+    ----> SecurityContext(STores the logged in user details) ----> Controller
+
+3️⃣ JWT
+    JWT is a stateless authentication mechanism it works when the user log in into his account server validates and generates a JWT token ,which is sent to the client 
+    and for every request made by the user, the server validates the token
+
+4️⃣ Password Encryption
+    Password encryption is used to securely store the password using the one-way hashing so the original password cannot be retrieved.
+
+    BCrypt:- Spring uses BCrypt to securely store the password that uses salting and hashing that helps to avoid bruteforce attacks.
+
+5️⃣ Role-based access
+   Role based access is an authorization stratagy which allows the accessing of resources based on the users role
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    
