@@ -902,5 +902,10 @@ Spring security:
 5️⃣ Role-based access
    Role based access is an authorization stratagy which allows the accessing of resources based on the users role
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-    
+---------------------------------------------
+| Situation                   | Status Code |
+| --------------------------- | ----------- |
+| Not logged in               | **401**     |
+| Logged in but wrong role    | **403**     |
+| Logged in with correct role | **200**     |
+---------------------------------------------
