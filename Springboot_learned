@@ -12,7 +12,7 @@ Spring is a lightweight java framework that provides:
 -> Manual Dependency Management
 
 🔹Spring Boot:
-Spring boot is built on top of spring for faster development
+Spring boot is built on top of spring framework for faster development
 ✅ Advantages:
 -> faster development
 -> no XML configuration
